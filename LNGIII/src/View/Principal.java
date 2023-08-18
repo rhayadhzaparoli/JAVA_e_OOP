@@ -23,8 +23,8 @@ public class Principal {
         System.out.println(prof1.cumprimentar());
 
         // nesse caso o dr.: entra na parte de tratamento declarado 
-        // anteriormente. OverLoad aqui
+        // anteriormente. OverLoad aqui.
         Professor prof2 = new Professor("Ivad", "ivad005@fatecrl.edu.br", 100000);
-        System.out.println(prof2.cumprimentar("Dr.: "));
+        System.out.println(prof2.cumprimentar("Doutor.: "));
     }
 }
