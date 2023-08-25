@@ -39,4 +39,6 @@ public class Main {
         System.out.println(cachorro1.latir()); 
         cachorro1.brincar(); 
             
+        // caso queira gerar uma acao diferente para cada metodo, deve-se fazer o Overload
+        // na classe referente (filha) e aqui dar a cao desejada 
     }}

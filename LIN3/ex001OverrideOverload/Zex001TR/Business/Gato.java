@@ -17,11 +17,19 @@ public String miar(){
     return ("miau ");
 }
 
-
-@Override
+// poderia ser assim tambem com metodo void
+/*@Override
 public
 
 void brincar(){
     System.out.println("Novelo de la \n");
  
-}}
+}*/ 
+@Override
+public
+
+void brincar(){
+ System.out.println("novelo de la \n");
+    
+   }
+}
