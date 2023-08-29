@@ -1,8 +1,8 @@
-package LIN3.Zex002TR.Business;
+package LIN3.ex002Interface.Business;
 
 
     public interface ICalculo {
-        void calcular(); 
+        float calcular(); 
     }
 
 /* Interface é utilizada para fazer herança multipla, ou seja, a 
