@@ -1,6 +1,6 @@
-package LIN3.ex002Interface.Business;
+package LIN3.ex002InterfaceUpcasting.Business;
 
-abstract class Calculo implements ICalculo {
+ public abstract class Calculo implements ICalculo {
     
     protected float v1;
     protected float v2;

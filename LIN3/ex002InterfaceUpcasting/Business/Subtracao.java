@@ -1,4 +1,4 @@
-package LIN3.ex002Interface.Business;
+package LIN3.ex002InterfaceUpcasting.Business;
 
 public class Subtracao extends Calculo{
     public Subtracao(float v1, float v2) {

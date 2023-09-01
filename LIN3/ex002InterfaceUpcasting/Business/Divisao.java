@@ -1,4 +1,4 @@
-package LIN3.ex002Interface.Business;
+package LIN3.ex002InterfaceUpcasting.Business;
 
 public class Divisao extends Calculo{
     
