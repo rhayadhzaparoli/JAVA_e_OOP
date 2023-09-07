@@ -9,44 +9,40 @@ public class Main {
     
     public static void main(String[] args) {
 
-        Scanner scan = new Scanner(System.in );
-        Veiculo veic = null;
-        System.out.println("Informe o valor");
-        int choice = scan.nextInt();
+        try (Scanner scan = new Scanner(System.in )) {
+            System.out.println("Informe o valor");
+            int choice = scan.nextInt();
 
-
-
-        switch (choice){
-             case 1: veic = new Carro("X86", "Posrche", 2030);
-             {
-
-                System.out.println(String.format("Dados do carro:\n Nome: " + veic.getNome() +"\n Fabricante: "+ veic.getFabricante() + "\n Ano: " + veic.getAno()));
-                veic.parar(0);
-                veic.acelerar(0);
-                veic.desacelerar(0);
-                veic.parar(0);
-
-             } break;
-             case 2: veic = new Moto("XY-K37", "Honda", 2029);
-             {
-                   System.out.println(String.format("Dados da moto:\n Nome: " + veic.getNome() +"\n Fabricante: "+ veic.getFabricante() + "\n Ano: " + veic.getAno()));
-                   veic.parar(0);
-                   veic.acelerar(0);
-                   veic.desacelerar(0);
-                   veic.parar(0);
-             } break;
             
-             case 3: veic = new Veiculo("Axis", "Audi", 2032);{
 
-                System.out.println(String.format("Dados do Veiculo:\n Nome: " + veic.getNome() +"\n Fabricante: "+ veic.getFabricante() + "\n Ano: " + veic.getAno()));
-                veic.parar(0);
-                veic.acelerar(0);
-                veic.desacelerar(0);
-                veic.parar(0);
-             } break;
-        }
+           
+            Veiculo transporte = null;
 
-     
+            switch (choice) {
+                case 1:
+                    transporte = new Moto("XY-K37", "Honda", 2029,0);
+                    break;
+                case 2:
+                 
+                    transporte = new Veiculo("X86", "Porsche", 2548);
+                    break;
+                case 3:
+                    transporte = new Carro("Axis", "Audi", 2032, 0);
+                    break;
+            }
 
-    }
+            if (transporte != null) {
+                // Motivo daquela instancia vazia
+                System.out.println(String.format("Dados do veículo:\n Nome: " + transporte.getNome() + "\n Fabricante: " + transporte.getFabricante() + "\n Ano: " + transporte.getAno()));
+                transporte.parar(0);
+                transporte.acelerar(0);
+                transporte.desacelerar(0);
+                transporte.parar(0);
+                
+   }
+
+                      
+                  
+                    
 }
+}}

@@ -2,7 +2,7 @@ package LIN3.ex004AssociacaoComplementar.Business;
 
 public class Moto extends Veiculo{
     
-    public Moto(String nome, String fabricante, int ano) {
+    public Moto(String nome, String fabricante, int ano, int velocidade) {
         super(nome, fabricante, ano);
 
     }
@@ -19,7 +19,7 @@ public class Moto extends Veiculo{
 
     @Override
     public int desacelerar(int velocidade){
-        for (velocidade = 180; velocidade >= 10; velocidade -= 10){
+        for (velocidade = getVelocidade(); velocidade >= 10; velocidade -= 10){
             System.out.println("\nDesacelerando a moto \n" + velocidade);
         }
         return velocidade;

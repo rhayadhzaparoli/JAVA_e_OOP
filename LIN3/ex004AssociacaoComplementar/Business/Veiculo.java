@@ -2,12 +2,12 @@ package LIN3.ex004AssociacaoComplementar.Business;
 
 import java.util.Scanner;
 
-public class Veiculo {
+public abstract  class Veiculo {
     
     protected String nome;
     protected String fabricante;
     protected int ano;
-    public int velocidade;
+    protected int velocidade;
 
     
     
@@ -35,7 +35,7 @@ public class Veiculo {
 
     public int desacelerar(int velocidade){ 
 
-        for ( velocidade = 180; velocidade >= 5; velocidade -= 5){
+        for ( velocidade = getVelocidade(); velocidade >= 5; velocidade -= 5){
             System.out.println("\nDesacelerando o veiculo \n" + velocidade);
         }
         return velocidade;
