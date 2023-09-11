@@ -11,6 +11,7 @@ public abstract  class Veiculo {
 
     
     
+   
     public String getNome() {
         return nome;
     }
@@ -20,11 +21,9 @@ public abstract  class Veiculo {
     public int getAno() {
         return ano;
     }
-    public int getVelocidade() {
+    public int getVelocidade(){
         return velocidade;
     }
-
-    Scanner scan = new Scanner(System.in);
 
     public int acelerar(int velocidade){ 
                 for (velocidade = 5; velocidade <= 180; velocidade += 5){
@@ -52,6 +51,9 @@ public abstract  class Veiculo {
         this.nome = nome;
         this.fabricante = fabricante;
         this.ano = ano;
+    }
+    public int getLimite() {
+        return 0;
     }
     
 }
