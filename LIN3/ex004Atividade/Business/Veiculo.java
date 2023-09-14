@@ -4,7 +4,7 @@ public  class Veiculo {
     private String nome;
     private String fabricante;
     private int ano;
-    private int velocidade;
+    protected int velocidade;
 
     
 
@@ -28,7 +28,6 @@ public  class Veiculo {
         this.nome = nome;
         this.fabricante = fabricante;
         this.ano = ano;
-        this.velocidade = 0;
     }
 
     public void acelerar() {
@@ -52,4 +51,10 @@ public  class Veiculo {
     public void parar() {
         velocidade = 0;
         System.out.println("O veículo parou.");
-    }}
+    }
+
+    @Override
+    public String toString(){
+        return String.format("Veiculo: %s", "velocidade: %d Km/h", nome, velocidade);
+    }
+}
