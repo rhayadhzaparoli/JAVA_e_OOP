@@ -9,12 +9,11 @@ public class Aula {
 	private Materia materia;
 	private ArrayList<Aluno> listagemAlunos;
 	
-	public Aula(Professor professor, Disciplina disciplina, String topicoMateria) {
+	public Aula(Professor professor, Disciplina disciplina) {
 		// inicializa professor e disciplina com "objetos" recebidos via parâmetro
 		this.professor = professor;
 		this.disciplina = disciplina;
 		
-		this.materia = new Materia(topicoMateria);
 		this.listagemAlunos = new ArrayList<Aluno>();
 	}
 
@@ -34,17 +33,16 @@ public class Aula {
 
 	public String retornarInfo() {
 		String infoAula = "*** Aula de hoje ***";
-		/*
-		código da disciplina
-		nome do professor
-		nome da matéria
-		listagem de alunos presentes		 
-		*/
+		
+		infoAula += "\nDisciplina:" + disciplina.getCodigo();
+		infoAula += "\nProfessor:" + professor.getNome();
+		infoAula += "\nMateria:" + materia.getTopico();
+		infoAula += "\nAlunos:";
 
-		System.out.println(getDisciplina()); 
-		System.out.println(getProfessor());
-		System.out.println(getMateria());;
-		System.out.println(getListagemAlunos());
+		for (Aluno alunoTemp : listagemAlunos) {
+			infoAula += "\n - " + alunoTemp.getNome();
+		}
+	
 		
 		return infoAula;
 	}

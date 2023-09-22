@@ -1,6 +1,6 @@
 package view;
 
-import business.Aula;
+import business.*;
 
 public class Principal {
 
